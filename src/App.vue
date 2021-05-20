@@ -5,6 +5,7 @@
     </header>
     <main>
       <section class="player">
+        <br>
         <h2 class="song-title">{{current.title}} - <span> {{current.artist}}</span></h2>
       <div class= "ctrl">
         <button class="prev" @click="prev">Prev</button>
@@ -147,7 +148,7 @@ button {
 button:hover {
   opacity: 0.8;
 }
-.play {
+.play, .pause {
   font-size: 20px;
   font-weight: 700;
   padding: 15px 25px;
@@ -165,6 +166,35 @@ button:hover {
   border-radius: 6px;
   color: #fff;
   background-color: #ff5858;
+}
+
+.playlist {
+  padding: 0px 30px;
+}
+
+.playlist h3 {
+  color: #212121;
+  font-size: 28px;
+  font-weight: 480;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.playlist .song {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: 780;
+  cursor: pointer;
+}
+.playlist .song:hover {
+  color: #ff5858;
+}
+
+.playlist .song.playing {
+  color: #fff;
+  background-image: linear-gradient(to right, #cc2e50, #ff5858);
 }
 
 </style>
